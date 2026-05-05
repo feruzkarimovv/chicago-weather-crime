@@ -71,7 +71,8 @@ chicago-weather-crime/
 │   ├── per_category.csv          # per-category R²/MAE/RMSE
 │   └── rf_model.pkl              # pickled main RF
 └── report/
-    └── final_report.md
+    ├── final_report.md           # markdown source
+    └── final_report.pdf          # submitted deliverable
 ```
 
 ---
