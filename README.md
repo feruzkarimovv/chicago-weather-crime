@@ -3,7 +3,7 @@
 CS 210 final project. Looking at whether daily weather predicts daily crime in Chicago, 2018–2024.
 
 **Final report:** `report/final_report.pdf`
-**Demo video:** <<YouTube URL pending>>
+**Demo video:**
 
 ---
 
