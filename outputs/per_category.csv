@@ -1,0 +1,8 @@
+category,r2,mae,rmse
+total_crimes,0.463,39.37,54.5
+theft,0.269,17.0,21.76
+battery,0.403,13.13,16.95
+burglary,-0.435,5.89,7.43
+assault,0.09,8.48,10.68
+narcotics,-5.669,12.07,14.1
+criminal_damage,0.236,9.51,12.62

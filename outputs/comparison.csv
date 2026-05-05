@@ -1,0 +1,5 @@
+model,test_mae,test_rmse,test_r2,cv_mae_mean,cv_mae_std
+mean_baseline,74.95,93.75,-0.589,,
+dow_baseline,75.19,93.24,-0.571,,
+ridge,40.49,54.87,0.456,62.79,30.75
+random_forest,39.37,54.5,0.463,66.5,37.17
