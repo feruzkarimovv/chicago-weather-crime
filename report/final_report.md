@@ -4,7 +4,7 @@
 **Course:** CS 210, Data Management for Data Science
 **Date:** May 2026
 **GitHub:** https://github.com/feruzkarimovv/chicago-weather-crime
-**Demo:** <<YouTube URL pending>>
+**Demo:** https://share.synthesia.io/a086ba38-2b84-4616-9538-0c814d2f0779
 
 ---
 
