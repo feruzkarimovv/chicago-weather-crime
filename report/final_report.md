@@ -70,7 +70,7 @@ For the database, I built three SQLite tables: `weather`, `crime_daily`, and `fe
 
 ![](../outputs/figures/fig_03_corr_heatmap.png)
 
-*Figure 2: Pearson correlations between weather variables and per-category daily crime counts. TMAX correlates positively with most categories (assault, criminal damage, battery, theft) and slightly negatively with narcotics. PRCP and SNOW are near-zero across the board. (Source: merged.csv, 2018–2024.)*
+*Figure 2: Pearson correlations between weather variables and per-category daily crime counts. TMAX correlates positively with most categories (assault, criminal damage, battery, theft) and slightly negatively with narcotics. PRCP is near-zero across the board; SNOW shows weak negative correlations (-0.16 to -0.22) that mostly track the cold-weather seasonal dip. (Source: merged.csv, 2018–2024.)*
 
 ### 3.2 Models, Techniques, and Algorithms
 
@@ -163,7 +163,7 @@ The proposal called for PostgreSQL; I used SQLite. SQLite is what CS 210 covered
 
 I proposed multiple linear regression alongside Random Forest. I swapped OLS for Ridge regression to handle multicollinearity between TMAX, TMIN, and the temperature-derived flags. With weather features, the temperature columns are correlated by construction (TMIN is roughly TMAX minus a daily range that itself varies seasonally), so plain OLS coefficients are unstable. Ridge handles this directly through its L2 penalty.
 
-The day-of-week baseline was added during build, not in the proposal. I initially planned only the mean baseline, but seeing the EDA, where the day-of-week swing turned out to be ~80 crimes/day, it was clear the mean baseline was too weak for a meaningful comparison. Beating the mean is trivial on this kind of data; beating the day-of-week baseline is what actually tests the model.
+The day-of-week baseline was added during build, not in the proposal. I initially planned only the mean baseline, but seeing the EDA, where the day-of-week swing turned out to be ~30 crimes/day, it was clear the mean baseline was too weak for a meaningful comparison. Beating the mean is trivial on this kind of data; beating the day-of-week baseline is what actually tests the model.
 
 Per-category modeling and the COVID-year flag also emerged during build. The per-category split was the cleanest way to see whether weather effects are uniform across crime types (they're not). The COVID flag was the alternative to dropping 2020 entirely, which would have thrown away seven months of useful weather variation along with the lockdown-induced crime drop.
 
